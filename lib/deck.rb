@@ -29,4 +29,8 @@ class Deck
   def shuffle
     @decks.shuffle!
   end
+
+  def count
+    return decks.length
+  end 
 end

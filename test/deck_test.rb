@@ -43,8 +43,15 @@ describe Deck do
       card = decks.draw
       expect(decks.decks.include?(card)).must_equal false 
     end 
-
   end 
+
+    describe "count method" do
+      it "gives correct number count" do
+        decks = Deck.new
+        expect(decks.count).must_equal 52 
+      end 
+    end
+
 
   # describe "Shuffle method" do 
   #   it "return "
