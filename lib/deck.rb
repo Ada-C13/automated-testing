@@ -22,7 +22,7 @@ class Deck
   def draw
     # returns a card
     card = decks.sample
-    @decks = @decks.reject {|cards| cards == card}
+    @decks = decks.reject {|cards| cards == card}
     return card 
   end
 
