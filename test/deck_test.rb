@@ -1,4 +1,6 @@
 require_relative 'test_helper'
+require 'simplecov'
+SimpleCov.start 
 
 describe Deck do
   # Write tests for the Deck class.
@@ -52,9 +54,22 @@ describe Deck do
       end 
     end
 
+  
+  describe "check edge case for draw" do 
+    let (:empty_deck) {
+      new_deck = Deck.new
+      n = new_deck.decks.length
 
-  # describe "Shuffle method" do 
-  #   it "return "
-  # end 
+      n.times do 
+        new_deck.draw
+      end 
+
+      empty_deck = new_deck
+      empty_deck
+    }
+    it "draws from empty deck should return nil" do 
+      expect(empty_deck.draw).must_be_nil
+    end 
+  end 
 
 end
