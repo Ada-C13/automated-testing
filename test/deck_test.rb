@@ -1,6 +1,5 @@
 require_relative 'test_helper'
-require 'simplecov'
-SimpleCov.start 
+
 
 describe Deck do
   # Write tests for the Deck class.
